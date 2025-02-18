@@ -1,0 +1,67 @@
+.detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail-container {
+    padding: 0 10px;
+}
+
+.detail-logo {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.description {
+    display: flex;
+    background: #f9f8f8;
+    border-radius: 10px;
+    padding: 10px 10px;;
+}
+
+.icon {
+    top: 3px;
+    position: relative;
+}
+
+.chip {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.chip span {
+    margin-left: 5px;
+    border: 0.5px solid var(--lightgrey);
+    background-color: var(--lightgrey);
+    padding: 5px;
+    border-radius: 40%;
+    font-size: 12px;
+}
+
+.repo-url {
+    display: flex;
+    margin: 10px 0;
+}
+
+@media (min-width:320px) and (max-width:720px) {
+    .detail {
+        flex-direction: column;
+    }
+
+    .detail-logo {
+        flex-wrap: wrap;
+        gap: 0;
+        justify-content: space-around;
+    }
+
+    .description {
+        padding: 10px 0;
+   
+    }
+}

@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { RepoProvider } from './context/RepoProvider';
+import { BrowserRouter as Router } from 'react-router';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RepoProvider>
+      <Router>
+      <App />
+      </Router>
+
+    </RepoProvider>
   </React.StrictMode>
 );
 
