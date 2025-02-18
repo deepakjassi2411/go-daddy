@@ -76,3 +76,9 @@
         align-items: start;
     }
 }
+
+.no-issues {
+    display: flex;
+    justify-content: center;
+    color: var(--darkgrey);
+}

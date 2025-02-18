@@ -47,17 +47,17 @@ function RepoDetails() {
                             <div  data-testid="_fullName"><h2>{repo.full_name}</h2></div>
                             <div className="detail-logo">
                                 <p className="chip" data-testid="_watchers"><FaRegEye />&nbsp; Watchers
-                                    <span>{repo.watchers}</span>
+                                    <span>{repo.watchers ?? 0}</span>
                                 </p>
                                 <p className="chip" data-testid="_language"><FaLanguage />&nbsp;Language
-                                    <span>{repo.language}</span>
+                                    <span>{repo.language ?? 0}</span>
                                 </p>
                                 <p className="chip"  data-testid="_forksCount"><FaCodeFork />&nbsp;Forks
-                                    <span>{repo.forks_count} </span>
+                                    <span>{repo.forks_count ?? 0} </span>
                                 </p>
                             </div>
                         </div>
-                        <div className="description" data-testid="_description">{repo.description}</div>
+                        {repo.description && <div className="description" data-testid="_description">{repo.description}</div>}
                         <div className="repo-url">
                             <Link to={repo.html_url} target="_blank">Go To Repo&nbsp;<FaArrowUpRightFromSquare size="14" className="icon" /></Link>
                         </div>
@@ -68,7 +68,6 @@ function RepoDetails() {
                 </>
             )
             }
-
         </>
     )
 }
